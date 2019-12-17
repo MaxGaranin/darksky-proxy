@@ -2,7 +2,7 @@ const express = require('express');
 const fetch = require('node-fetch');
 
 const app = express();
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 app.get('/weather-forecast/:coordinates', (req, res) => {
   const WEATHER_API_TOKEN = 'd3eed1d90c304495c933fdef36c0d0a3';
